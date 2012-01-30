@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<!--
+  Document   : TF2LogParse.html
+  Created on : August 1, 2011
+  Author     : Andrew, AndrewWilkinson88@gmail.com
+               UMass Lowell Computer Science
+-->
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-type" content='text/html; charset=UTF-8' />
+    <title>Android Labs</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+  </head>
+  <body onLoad="initLinks()">
+    <div style="text-align: center"> <!-- So align="center" doesn't exist for tables
+                                     even though most browsers recognize it, it doesn't
+                                     pass XHTML Strict. This is a more allowable solution -->
+      <table style="width:900px; margin-right: auto; margin-left: auto;">
+        <tr>  <!--Title Begin -->
+          <td>
+            <!-- Uses two ID's as no other element of the page is going to use
+            these special Title styles -->
+            <div id="Android">ANDROID<span id="Labs">LABS</span></div>
+          </td>
+        </tr> <!--Title End -->
+
+        <tr>  <!--Links+News require their own table-->
+          <td> <!-- Normal table element has no border -->
+            <table>
+              <tr>
+                <td class="withBorder"> <!--Links Begin-->
+                  <!-- The alternative to the no border -->
+                  <div class="Links">   <!-- Links on left side of page -->
+                    <h2>Android Labs</h2>
+                    <ul>
+                      <li><a class="main" href="index.html">Home</a></li>
+                      <li><a class="main" href="About.html">About</a></li>
+                      <li><a class="main" href="http://androidlabs.blogspot.com/">Blog</a></li>
+                      <li><a class="main" href="Projects.html">Projects</a></li>
+                      <li class="sub">
+                        <ul>
+                          <li class="sub"><a href="Weave.html">Weave</a></li>
+                          <li class="sub"><a href="Html5Example.html">HTML 5 Examples</a></li>
+                          <li class="sub"><a href="LSystems.html">L-Systems in OpenTK</a></li>
+                          <li class="sub"><a href="TF2LogParse.html">TF2 Log Parser</a></li>
+                          <li class="sub"><a href="http://www.mechasoup.com/comic/index.php?date=2005-12-22">Mecha Soup Web Comic</a></li>
+                        </ul>
+                      </li>
+                      <li><div class="linkHeader">Links</div></li>
+                      <li class="sub">
+                        <ul>
+                          <li class="sub"><a href="https://plus.google.com/105792254768354870620/posts">My Google plus account</a></li>
+                          <li class="sub"><a href="https://github.com/AndrewWilkinson88">My GitHub Profile</a></li>
+                          <li class="sub"><a href="http://steamcommunity.com/id/MrAndroid">My Steam Profile</a></li>
+                          <li class="sub"><a href="http://fungineers.net">The Fun-Gineers</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                    &nbsp; <!-- Make sure rest of cell is filled -->
+                  </div>
+                </td> <!--Links End-->
+                <td class="withBorder" style="width: 100%;"> <!--Content Begin-->
+                  <div id="content">
+                    
+                    <h1>TF2 Log Parser</h1>
+                    
+                    <p class="box">
+                      This project was also a very exciting project for me to work on.
+                      My visualization class called for a project that either created a
+                      new visualization or performed a data analysis on a set of data
+                      we created. I thought it'd be neat if I used some data from
+                      the game <a class="plain" href="http://teamfortress.com">Team Fortress 2</a>, 
+                      being hosted on the FUN-Gineers server, a gaming community I helped start. 
+                      I didn't have enough time to parse out a years worth of data, 
+                      but hopefully someday I'll be able to perform a more in depth 
+                      analysis.
+                    </p>
+                    
+                    <p class="box">
+                      For this assignment, I used the largest log file we had for a single
+                      running time of the server. A log is generated as long as there is 
+                      players on the server and than it stops when there are none. This Log
+                      ran for 32 hours or so before the server finally cleared out. I got some
+                      interesting results which allowed me to make this presentation
+                      located here: <a class="plain" href="http://goo.gl/ylF5V">TF2 Presentation</a>
+                    </p>
+                    
+                    <p class="box">
+                      There were more many interesting things I was noticing just looking over
+                      the data I had pulled from the log file, but due to time constraints
+                      I only made an analysis about the kills+assists to deaths ration by class,
+                      to determine the most well played classes. Here are some of the graphs
+                      from the presentation below.
+                    </p>
+                    
+                  
+                      <table>
+                        <tr>
+                          <td>
+                            <p class="box">
+                              <a class="plain" href="images/TF2LogPic1.jpg">
+                                <img height="200" width="200" src="images/TF2LogPic1.jpg"/>
+                              </a>                    
+                            </p>
+                          </td>
+                          <td>
+                            <p class="box">
+                              <a class="plain" href="images/TF2LogPic2.jpg">
+                                <img height="200" width="200" src="images/TF2LogPic2.jpg"/>
+                              </a>
+                            </p>
+                          </td>
+                          <td>
+                            <p class="box">
+                              <a class="plain" href="images/TF2LogPic3.jpg">
+                                <img height="200" width="200" src="images/TF2LogPic3.jpg"/>
+                              </a>           
+                            </p>
+                          </td>
+                        </tr>
+                      </table>
+                    
+                    
+                    <p class="box">
+                      Two things about the coding with this project that I had I never dealt
+                      with before, Python and Regular Expressions. Both of these things
+                      were a strong driver for writing my own code as I really wanted to learn
+                      them. My friend is a python guru and made the language sound so useful.
+                      RegEx seemed easy enough, but I only found after I finished my project
+                      I wasn't using them correctly and could've made string parsing a lot easier.
+                      By using "submatches" I could've saved matched strings to variables and
+                      than had access to those... Where as I did everything the hard way and
+                      used string functions like split to break down the log lines. Lesson
+                      learned however and someday I'll edit this code so it's cleaner and uses
+                      RegEx more effectively! If you would like the source it's right here:
+                      <a class="plain" href="source/TF2 Parser.rar">TF2 Parser.rar</a>
+                    </p>
+                    
+                  </div>
+                 </td><!--Content End-->
+              </tr>
+            </table>
+          </td>
+        </tr><!--Links+News End-->
+      </table>
+    <footer>
+      <p class="validator">
+        <a href="http://validator.w3.org/check?uri=referer"><img
+            src="http://www.w3.org/Icons/valid-xhtml10"
+            alt="Valid XHTML 1.0 Strict" height="31" width="88" /></a>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer">
+          <img style="border:0;width:88px;height:31px"
+               src="http://jigsaw.w3.org/css-validator/images/vcss"
+               alt="Valid CSS!" />
+        </a>
+      </p>
+    </footer>
+  </div>
+</body>
+</html>

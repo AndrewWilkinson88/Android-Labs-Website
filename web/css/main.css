@@ -1,0 +1,293 @@
+/*
+    Document   : main
+    Created on : Oct 21, 2010, 10:16:34 PM
+    Author     : Awilkins
+    Description:
+        Main style sheet for the awilkins GUI pages.
+        Done in css 3.0 !! <-Be sure to validate right version
+*/
+
+/**/
+/*The Body Style*/
+/**/
+body /*Used in all webpages, defines the main background and  */
+{
+  background-color: #2F2F2F;  /* Dark Grey */
+  background-image: url(images/Background.png);
+  background-position: top left;
+  background-repeat: no-repeat;
+  margin: 0px;
+}
+
+/**/
+/*the different header styles */
+/**/
+h1 /*Used in assignment 7, to define the title of the Course */
+{
+  border-bottom: 3px solid black;
+  color: white;
+  font-family: Arial;
+  font-size: 2em;
+  letter-spacing: 5px; /*The artsy thing to do */
+  text-align: center;
+}
+h2 /*Used in all the pages as title to the links on the left */
+{
+  background-color: rgb( 208, 73, 51);
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  color: white;
+  font-family: Arial;
+  font-size: 1.25em;
+  font-weight: bold;
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+}
+h2.section /*Used only in Assignment 7 to define the different sections(definition, professor, book) */
+{
+  border-style:none;
+  background:none;
+  text-align:left;
+  border-bottom-style: solid;
+  letter-spacing: 5px;
+}
+h2.date, h2.White, h2.Yellow, h2.Green /*Used for date in assignment 6 */
+{
+  border-style:none;
+  border-bottom: 3px solid black;
+  padding-bottom: 5px;
+  background:none;
+  font-size: 1em;
+  font-weight:normal;
+}
+h2.White, h2.Yellow, h2.Green /*Used in assignment 6 for the bullet points*/
+{
+  text-align: left;
+  margin-bottom: 0px;
+}
+/* These three styles are for assignment 6 to switch the headers to diff colors */
+h2.White{color:white;}
+h2.Yellow{color:yellow;}
+h2.Green{color:rgb(0,255,0);}
+
+h3 /* Used for Date on main page*/
+{
+  color: white;
+  font-family: Arial;
+  font-size: 1.5em;
+  font-weight: lighter;
+  letter-spacing: 10px;
+  margin: 5px;
+  padding: 5px;
+  text-align: left;
+}
+
+/**/
+/*the table element styles */
+/**/
+td
+{
+  margin: 0px;
+  padding: 0px;
+  vertical-align: top;
+}
+td.withBorder /*Used on all pages to seperate the Links and Content */
+{
+  background-color: rgba( 0, 0, 0, .65);
+  border-color: black;
+  border-style: solid;
+  border-width: 3px;
+}
+
+/**/
+/* The list styles */
+/**/
+ul
+{
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  text-align: right;
+}
+ul.features, ul.nav, ul.Circle, ul.Square, ul.Disc
+{
+  color: white;
+  padding: 20px;
+  text-align: left;
+}
+/* The options when for assignment 6 as to pick different bullet types */
+ul.Circle{list-style-type:circle;}
+ul.Square{list-style-type:square;}
+ul.Disc{list-style-type:disc;}
+
+/*Used in assignment 7 for horizontal list of links*/
+ul.nav
+{
+  background-color: rgb( 208, 73, 51);
+  text-align: center;
+  margin: 0px;
+  padding: 5px 0px;
+  border-bottom-style: solid;
+  border-color: black;
+}
+/*Used in assignement 7 to make Link Buttons sort of things */
+ul.nav > li
+{
+  background-color: rgba( 141, 176, 208, .50);
+  font-family: Arial;
+  border-color: black;
+  border-width: 2.5px;
+  display: inline;
+  font-size: 1.5em;
+  padding: 0px 5px;
+  margin: 0px 2.5px;
+}
+
+li
+{
+  background-color: rgb( 141, 176, 208);
+  border-style: solid;
+  border-width: 1px;
+}
+li.sub
+{
+  background-color: rgba( 0, 0, 0, .65);
+  border-style: none;
+}
+li.sub > ul > li /*Uses the child selector so that I don't need to specify all following
+                   list elements as li.sub */
+{
+  background-color: rgba( 0, 0, 0, .65);
+  border-style: none;
+}
+li.featureText
+{
+  border-style: none;
+  background: none;
+}
+li.currentSection
+{
+  margin-right: 0px;
+}
+
+/**/
+/* The Link styles */
+/**/
+a
+{
+  color: white;
+  font-family: Arial;
+  font-size: .75em;
+  margin-right: 10px;
+  text-decoration: none;
+}
+a.main
+{
+  font-size: 1.5em;
+}
+a:hover /*Enhances the size of the links when you mouse over them
+          I hope this satisifies the something changes with user input
+          requirement */
+{
+  color: rgb( 208, 73, 51);
+}
+a.plain
+{
+  color: rgb( 208, 73, 51);
+  margin-right: 0px;
+  font-family: serif;
+  text-align: left;
+  font-size: 1em;
+  
+}
+a.plain:hover
+{
+  color: rgb( 141, 176, 208);
+}
+
+/**/
+/* The various div styles */
+/**/
+div.news
+{
+  padding-left: 5px;
+  padding-right: 5px;
+}
+div.Links
+{
+  width: 200px; /* Make sure the column stays a fixed width */
+}
+div.newsPost
+{
+  color: white;
+}
+div.linkHeader
+{
+  color: white;
+  font-family: Arial;
+  font-size: 1.5em;
+  margin-right: 10px;
+}
+
+/**/
+/* The various paragraph styles */
+/**/
+p, p.White, p.Yellow, p.Green
+{
+  color: white;
+  font-family: serif;
+  text-align: left;
+}
+p.White{color:white;}
+p.Yellow{color:yellow;}
+p.Green{color:rgb(0,255,0);}
+
+p.validator, p.form
+{
+  text-align: center;
+}
+
+p.box
+{
+  margin: 10px;
+  padding: 5px 10px;
+  background-color: rgb( 20, 20, 20 );
+  border-style: solid;
+  border-color: black;
+  border-width: 2.5px;
+}
+
+/**/
+/* The various span styles */
+/**/
+span.head /* Used in Assignment 7 for value types(title, author, etc.)*/
+{
+  font-weight: bold;
+  text-decoration: underline
+}
+
+/**/
+/* Used only for the cool effects on the title so I decided on id's */
+/**/
+#Android
+{
+  color: white;
+  font-family: Arial;
+  font-size: 4.5em;
+  letter-spacing: 10px;
+  text-align: left;
+  vertical-align: bottom;
+}
+#Labs
+{
+  background-color: rgba( 0, 0, 0, .65);
+  font-family: monospace;
+  letter-spacing: 0px;
+}
+#currString
+{
+  font-size: 1.5em;
+  padding-left: 20px;
+}
