@@ -207,6 +207,21 @@ a.plain:hover
   color: rgb( 141, 176, 208);
 }
 
+a.button
+{
+  background-color: rgb( 208, 73, 51);
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+a.button:hover
+{
+  color: rgb( 141, 176, 208);
+}
+
 /**/
 /* The various div styles */
 /**/
@@ -214,10 +229,6 @@ div.news
 {
   padding-left: 5px;
   padding-right: 5px;
-}
-div.Links
-{
-  width: 200px; /* Make sure the column stays a fixed width */
 }
 div.newsPost
 {
@@ -290,4 +301,8 @@ span.head /* Used in Assignment 7 for value types(title, author, etc.)*/
 {
   font-size: 1.5em;
   padding-left: 20px;
+}
+#links
+{
+  width: 200px;
 }

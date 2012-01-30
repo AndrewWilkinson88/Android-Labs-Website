@@ -8,12 +8,13 @@
                UMass Lowell Computer Science
 -->
 
-<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-type" content='text/html; charset=UTF-8' />
     <title>Android Labs</title>
     <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <script src="scripts/LoadLinks.js"     type="text/javascript"></script>  
+    <script src="dynamic/LinksDynamic.js"  type="text/javascript"></script>
   </head>
   <body onLoad="initLinks()">
     <div style="text-align: center"> <!-- So align="center" doesn't exist for tables
@@ -34,39 +35,27 @@
               <tr>
                 <td class="withBorder"> <!--Links Begin-->
                   <!-- The alternative to the no border -->
-                  <div class="Links">   <!-- Links on left side of page -->
-                    <h2>Android Labs</h2>
-                    <ul>
-                      <li><a class="main" href="index.html">Home</a></li>
-                      <li><a class="main" href="About.html">About</a></li>
-                      <li><a class="main" href="http://androidlabs.blogspot.com/">Blog</a></li>
-                      <li><a class="main" href="Projects.html">Projects</a></li>
-                      <li class="sub">
-                        <ul>
-                          <li class="sub"><a href="Weave.html">Weave</a></li>
-                          <li class="sub"><a href="Html5Example.html">HTML 5 Examples</a></li>
-                          <li class="sub"><a href="LSystems.html">L-Systems in OpenTK</a></li>
-                          <li class="sub"><a href="TF2LogParse.html">TF2 Log Parser</a></li>
-                          <li class="sub"><a href="http://www.mechasoup.com/comic/index.php?date=2005-12-22">Mecha Soup Web Comic</a></li>
-                        </ul>
-                      </li>
-                      <li><div class="linkHeader">Links</div></li>
-                      <li class="sub">
-                        <ul>
-                          <li class="sub"><a href="https://plus.google.com/105792254768354870620/posts">My Google plus account</a></li>
-                          <li class="sub"><a href="https://github.com/AndrewWilkinson88">My GitHub Profile</a></li>
-                          <li class="sub"><a href="http://steamcommunity.com/id/MrAndroid">My Steam Profile</a></li>
-                          <li class="sub"><a href="http://fungineers.net">The Fun-Gineers</a></li>
-                        </ul>
-                      </li>
-                    </ul>
-                    &nbsp; <!-- Make sure rest of cell is filled -->
-                  </div>
+                 <div id="links"></div>
                 </td> <!--Links End-->
                 <td class="withBorder" style="width: 100%;"> <!--Content Begin-->
                   <div id="content">
                     
                     <h1>TF2 Log Parser</h1>
+                    
+                    <table style="width: 100%;">
+                      <tr>
+                        <td>
+                          <a class="button" href="https://github.com/AndrewWilkinson88/Team-Fortress-2--Log-Parser">
+                            Github Page
+                          </a> 
+                        </td>
+                        <td>
+                          <a class="button" href="https://github.com/AndrewWilkinson88/Team-Fortress-2--Log-Parser/zipball/master">
+                            Download Code
+                          </a> 
+                        </td>
+                      </tr>
+                    </table>
                     
                     <p class="box">
                       This project was also a very exciting project for me to work on.
@@ -97,51 +86,35 @@
                       from the presentation below.
                     </p>
                     
-                  
-                      <table>
-                        <tr>
-                          <td>
-                            <p class="box">
-                              <a class="plain" href="images/TF2LogPic1.jpg">
-                                <img height="200" width="200" src="images/TF2LogPic1.jpg"/>
-                              </a>                    
-                            </p>
-                          </td>
-                          <td>
-                            <p class="box">
-                              <a class="plain" href="images/TF2LogPic2.jpg">
-                                <img height="200" width="200" src="images/TF2LogPic2.jpg"/>
-                              </a>
-                            </p>
-                          </td>
-                          <td>
-                            <p class="box">
-                              <a class="plain" href="images/TF2LogPic3.jpg">
-                                <img height="200" width="200" src="images/TF2LogPic3.jpg"/>
-                              </a>           
-                            </p>
-                          </td>
-                        </tr>
-                      </table>
-                    
-                    
-                    <p class="box">
-                      Two things about the coding with this project that I had I never dealt
-                      with before, Python and Regular Expressions. Both of these things
-                      were a strong driver for writing my own code as I really wanted to learn
-                      them. My friend is a python guru and made the language sound so useful.
-                      RegEx seemed easy enough, but I only found after I finished my project
-                      I wasn't using them correctly and could've made string parsing a lot easier.
-                      By using "submatches" I could've saved matched strings to variables and
-                      than had access to those... Where as I did everything the hard way and
-                      used string functions like split to break down the log lines. Lesson
-                      learned however and someday I'll edit this code so it's cleaner and uses
-                      RegEx more effectively! If you would like the source it's right here:
-                      <a class="plain" href="source/TF2 Parser.rar">TF2 Parser.rar</a>
-                    </p>
-                    
                   </div>
                  </td><!--Content End-->
+                 <td class="withBorder"><!--Pictures Begin-->
+                   &nbsp;
+                   <table style="margin-right: auto; margin-left: auto;">
+                      <tr>
+                        <td>
+                          <a class="plain" href="images/TF2LogPic1.jpg">
+                            <img height="150" width="150" src="images/TF2LogPic1.jpg"/>
+                          </a>                    
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <a class="plain" href="images/TF2LogPic2.jpg">
+                            <img height="150" width="150" src="images/TF2LogPic2.jpg"/>
+                          </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <a class="plain" href="images/TF2LogPic3.jpg">
+                            <img height="150" width="150" src="images/TF2LogPic3.jpg"/>
+                          </a>
+                        </td>
+                      </tr>
+                    </table>
+                   &nbsp;
+                 </td> <!--Pictures End-->
               </tr>
             </table>
           </td>

@@ -8,12 +8,13 @@
                UMass Lowell Computer Science
 -->
 
-<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-type" content='text/html; charset=UTF-8' />
     <title>Android Labs</title>
     <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <script src="scripts/LoadLinks.js"     type="text/javascript"></script>  
+    <script src="dynamic/LinksDynamic.js"  type="text/javascript"></script>
   </head>
   <body onLoad="initLinks()">
     <div style="text-align: center"> <!-- So align="center" doesn't exist for tables
@@ -28,44 +29,31 @@
           </td>
         </tr> <!--Title End -->
 
-        <tr>  <!--Links+News require their own table-->
+        <tr>  <!--Links+Content+Pictures require their own table-->
           <td> <!-- Normal table element has no border -->
             <table>
               <tr>
                 <td class="withBorder"> <!--Links Begin-->
                   <!-- The alternative to the no border -->
-                  <div class="Links">   <!-- Links on left side of page -->
-                    <h2>Android Labs</h2>
-                    <ul>
-                      <li><a class="main" href="index.html">Home</a></li>
-                      <li><a class="main" href="About.html">About</a></li>
-                      <li><a class="main" href="http://androidlabs.blogspot.com/">Blog</a></li>
-                      <li><a class="main" href="Projects.html">Projects</a></li>
-                      <li class="sub">
-                        <ul>
-                          <li class="sub"><a href="Weave.html">Weave</a></li>
-                          <li class="sub"><a href="Html5Example.html">HTML 5 Examples</a></li>
-                          <li class="sub"><a href="LSystems.html">L-Systems in OpenTK</a></li>
-                          <li class="sub"><a href="TF2LogParse.html">TF2 Log Parser</a></li>
-                        </ul>
-                      </li>
-                      <li><div class="linkHeader">Links</div></li>
-                      <li class="sub">
-                        <ul>
-                          <li class="sub"><a href="https://plus.google.com/105792254768354870620/posts">My Google plus account</a></li>
-                          <li class="sub"><a href="https://github.com/AndrewWilkinson88">My GitHub Profile</a></li>
-                          <li class="sub"><a href="http://steamcommunity.com/id/MrAndroid">My Steam Profile</a></li>
-                          <li class="sub"><a href="http://fungineers.net">The Fun-Gineers</a></li>
-                          <li class="sub"><a href="http://www.mechasoup.com/comic/index.php?date=2005-12-22">Mecha Soup Web Comic</a></li>
-                        </ul>
-                      </li>
-                    </ul>
-                    &nbsp; <!-- Make sure rest of cell is filled -->
-                  </div>
+                  <div id="links"></div>
                 </td> <!--Links End-->
                 <td class="withBorder" style="width: 100%;"> <!--Content Begin-->
                   <div id="content">
                     <h1>L-Systems in OpenTK</h1>
+                    <table style="width: 100%;">
+                      <tr>
+                        <td>
+                          <a class="button" href="https://github.com/AndrewWilkinson88/L-Systems-in-OpenTK">
+                            Github Page
+                          </a> 
+                        </td>
+                        <td>
+                          <a class="button" href="https://github.com/AndrewWilkinson88/L-Systems-in-OpenTK/zipball/master">
+                            Download Code
+                          </a> 
+                        </td>
+                      </tr>
+                    </table>
                     <p class="box"> 
                       This project was for my geometric modeling class, where I 
                       was pursuing a way to create realistic tree growth. I never
@@ -91,70 +79,35 @@
                       just knowing what constants you're after.
                     </p>
                     
-                    <p class="box">
-                      I thought I'd show a the seven different L-Systems from the 
-                      program and if anyone is interested for further review, the
-                      source code can be found here: 
-                      <a class="plain" href="source/LSystems.rar">LSystems.rar</a>                    
-                    </p>
-                    
-                    <table>
+                  </div>
+                 </td><!--Content End-->
+                 <td class="withBorder"><!--Pictures Begin-->
+                   &nbsp;
+                   <table style="margin-right: auto; margin-left: auto;">
                       <tr>
                         <td>
-                          <p class="box">
-                            <a class="plain" href="images/LSystem1.jpg">
-                              <img height="150" width="150" src="images/LSystem1.jpg"/>
-                            </a>                    
-                          </p>
-                        </td>
-                        <td>
-                          <p class="box">
-                            <a class="plain" href="images/LSystem2.jpg">
-                              <img height="150" width="150" src="images/LSystem2.jpg"/>
-                            </a>                    
-                          </p>
-                        </td>
-                        <td>                          
-                          <p class="box">
-                            <a class="plain" href="images/LSystem3.jpg">
-                              <img height="150" width="150" src="images/LSystem3.jpg"/>
-                            </a>
-                          </p>
-                        </td>
-                        <td>
-                          <p class="box">
-                            <a class="plain" href="images/LSystem4.jpg">
-                              <img height="150" width="150" src="images/LSystem4.jpg"/>
-                            </a>
-                          </p>
+                          <a class="plain" href="images/LSystem2.jpg">
+                            <img height="150" width="150" src="images/LSystem2.jpg"/>
+                          </a>          
                         </td>
                       </tr>
                       <tr>
                         <td>
-                          <p class="box">
-                            <a class="plain" href="images/LSystem5.jpg">
-                              <img height="150" width="150" src="images/LSystem5.jpg"/>
-                            </a>
-                          </p>
+                          <a class="plain" href="images/LSystem4.jpg">
+                            <img height="150" width="150" src="images/LSystem4.jpg"/>
+                          </a>
                         </td>
+                      </tr>
+                      <tr>
                         <td>
-                          <p class="box">
-                            <a class="plain" href="images/LSystem6.jpg">
-                              <img height="150" width="150" src="images/LSystem6.jpg"/>
-                            </a>  
-                          </p>
+                          <a class="plain" href="images/LSystem6.jpg">
+                            <img height="150" width="150" src="images/LSystem6.jpg"/>
+                          </a>  
                         </td>
-                        <td>
-                          <p class="box">
-                            <a class="plain" href="images/LSystem7.jpg">
-                              <img height="150" width="150" src="images/LSystem7.jpg"/>
-                            </a>  
-                          </p>
-                        </td>
-                      </tr> 
+                      </tr>
                     </table>
-                  </div>
-                 </td><!--Content End-->
+                   &nbsp;
+                 </td> <!--Pictures End-->
               </tr>
             </table>
           </td>
