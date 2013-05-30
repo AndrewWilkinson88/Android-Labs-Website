@@ -2,76 +2,62 @@
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <!--
-  Document   : index.html
-  Created on : September 22, 2010
-  Updated on : June 29, 2011
-  Author     : Andrew, AndrewWilkinson88@gmail.com
-               UMass Lowell Computer Science
+  Document  : index.html
+  Edited    : May 30, 2013
+  Author    : awilkins, AndrewWilkinson88@gmail.com
 -->
 
 <html xmlns="http://www.w3.org/1999/xhtml">
+  
+  <!-- Store title and load scripts -->
   <head>
     <meta http-equiv="Content-type" content='text/html; charset=UTF-8' />
     <title>Android Labs</title>
-    <link rel="stylesheet" type="text/css" href="css/main.css" />
-    <script src="scripts/LoadLinks.js"     type="text/javascript"></script>  
-    <script src="dynamic/LinksDynamic.js"  type="text/javascript"></script>
+    
+    <!-- CSS Styles -->
+    <link   rel="stylesheet"                type="text/css" href="css/main.css" />
+    
+    <!-- JS Scripts -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+    
+    <script src="scripts/LoadNavigation.js" type="text/javascript"></script>  
+    <script src="dynamic/NavJson.js"        type="text/javascript"></script> 
   </head>
 
-  <!-- Using the function initLinks() to make sure all the
-  webpages have the same list of links -->
-  <body onload="initLinks()">
-    <div style="text-align: center"> <!-- So align="center" doesn't exist for tables
-                                     even though most browsers recognize it, it doesn't
-                                     pass XHTML Strict. This is a more allowable solution -->
+  <!-- Contains all the page elements -->
+  <body onload="initNavigation()">
+    <div style="text-align: center">
       <table style="width: 900px; margin-right: auto; margin-left: auto;">
-        <tr>  <!--Title Begin -->
+        <!-- Title -->
+        <tr>
           <td>
-            <!-- Uses two ID's as no other element of the page is going to use
-            these special Title styles -->
             <div id="Android">ANDROID<span id="Labs">LABS</span></div>
           </td>
-        </tr> <!--Title End -->
+        </tr>
 
-        <tr>  <!--Links+News require their own table-->
+        <tr>  <!--Navigation and Content require their own table-->
           <td> <!-- Normal table element has no border -->
             <table>
               <tr>
-                <td class="withBorder"> <!--Links Begin-->
-                  <!-- The alternative to the no border -->
-                  <div id="links"></div>
-                </td> <!--Links End-->
-                <td class="withBorder" style="width: 100%;">
-                  <!--Set the width style here to make sure it fills out rest 
-                  of table which it didn't seem to be doing without it -->
-                  <h1 style="border:none; margin-top: 5px; margin-bottom: 0px">Current Blog</h1>
-                  <h2 class="date">posted on August 4th, 2011</h2>
-                  <h3>New Beginnings</h3>
-                  <p class="box">
-                    I had thought one year ago when I first made a blog that
-                    it would really stick and be all the things I wanted, but
-                    time got away from me and fell into ruin. This time around,
-                    instead of hosting my own blog, I thought I'd just give a
-                    link from my page to the good folks at Blogger.
-                    <br/><br/>
-                    I'm a freshly graduated Computer Scientist with a strong 
-                    passion for games and game development. A brief introduction
-                    can be found here: <a class="plain" href="About.html"> About.</a>
-
-                    <br/><br/>
-                    My plan for this blog is to make games and document that 
-                    process here. While I have a few ideas in the works with
-                    my friend Phil Kovac, I haven't started the coding process
-                    to really put down anything. I hope whoever does read this
-                    blog, can learn from my learning process as I take on these
-                    big coding and game design projects. Thank you for reading 
-                    and I hope you enjoy the ride!
-                    <br/><br/>
-                    ~Andrew Wilkinson
-                  </p>
-                  
+              	
+              	<!-- Navigation panel -->
+                <td class="withBorder"> 
+                  <div id="navPanel"></div>
+                </td>              
+                
+                <!-- Blog Post + Current Project-->
+                <td class="withBorder" style="padding:20px; padding-top: 0px">
+                  <h1>Current Blog</h1>
+                  <div id="outerBlog" style="position:relative; overflow: hidden; width:100%; height:525px">
+                    <iFrame id    ="innerBlog"  scrolling = "no"  seamless
+                            width = 875         height    = 635
+                            style ="position:absolute; left:-250px; top:-110px"
+                            src   ="http://androidlabs.blogspot.com/">
+                      <p>Your browser does not support iFrames</p>
+                    </iFrame>
+                  </div>
+                               
                   <h1>Current Project</h1>
-
                   <p class="box">
                   <a class="plain" href="http://ivpr.github.com/Weave/">
                     <img style="float:right" width="300" height="200" src="http://ivpr.github.com/Weave/us_county_data_thumbnail.png"></img>
@@ -86,7 +72,6 @@
                     <br/><br/>
                   </p>
                      
-                  
                 </td>
               </tr>
             </table>
@@ -106,3 +91,4 @@
     </div>
   </body>
 </html>
+

@@ -1,33 +1,39 @@
 /*
-  Document   : LinksDynamic.js
-  Author     : Andrew, AndrewWilkinson88@gmail.com
-               UMass Lowell Computer Science
-  Description: This JSON file contains the names of all navigating links
-               located on the left side of the page.
+  Document		: NavJson.js
+  Edited		: May 30, 2013
+  Author		: Andrew, AndrewWilkinson88@gmail.com
+  Description	: This JSON file contains the names of all navigating links
+               		located on the left side of the page.
  */
 
-var main_links = {
-    "links" : {
-        "names" : [
+var main_nav = 
+{
+        "names" 	: [
             ["Home"],
             ["About"],
             ["Blog"],
             ["Projects"],
             ["Links"]
-        ] ,
-        "locations" : [
+        ],
+        "locations"	: [
             ["index.html"],
             ["About.html"],
             ["http://androidlabs.blogspot.com/"],
             ["Projects.html"],
-            ["Links.html"]
+            ["Links.html"]            
+        ],
+        "subNavigation"	: [
+        	"NULL",
+        	"NULL",
+        	"NULL",
+        	"project_nav",
+        	"links_nav"
         ]
-      }
 }
 
-var project_links = {
-    "links" : {
-        "names" : [
+var project_nav = 
+{
+        "names" 	: [
             ["This Website"],
             ["TF2 Log Parser"],
             ["L-Systems in OpenTK"]
@@ -37,12 +43,10 @@ var project_links = {
             ["TF2LogParse.html"],
             ["LSystems.html"]
         ]
-      }
 }
                           
-var other_links = {
-    "links" : {
-        "names" : [
+var links_nav = {
+        "names" 	: [
             ["My Google plus account"],
             ["My GitHub Profile"],
             ["My Steam Profile"],
@@ -56,5 +60,4 @@ var other_links = {
             ["http://fungineers.net"],
             ["http://www.mechasoup.com/comic/index.php?date=2005-12-22"]
         ]
-      }
 }
