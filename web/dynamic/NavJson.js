@@ -1,9 +1,7 @@
 /*
-  Document		: NavJson.js
-  Edited		: May 30, 2013
-  Author		: Andrew, AndrewWilkinson88@gmail.com
-  Description	: This JSON file contains the names of all navigating links
-               		located on the left side of the page.
+  Document	: NavJson.js
+  Edited	: June 7, 2013
+  Author	: Andrew, AndrewWilkinson88@gmail.com
  */
 
 var main_nav = 
@@ -11,21 +9,18 @@ var main_nav =
         "names" 	: [
             ["Home"],
             ["About"],
-            ["Blog"],
             ["Projects"],
             ["Links"]
         ],
         "locations"	: [
             ["index.html"],
             ["About.html"],
-            ["http://androidlabs.blogspot.com/"],
             ["Projects.html"],
-            ["Links.html"]            
+            ["NULL"]            
         ],
         "subNavigation"	: [
         	"NULL",
-        	"NULL",
-        	"NULL",
+        	"NULL",        	
         	"project_nav",
         	"links_nav"
         ]
@@ -39,7 +34,7 @@ var project_nav =
             ["L-Systems in OpenTK"]
         ] ,
         "locations" : [
-            ["Website.html"],
+            ["NULL"],
             ["TF2LogParse.html"],
             ["LSystems.html"]
         ]

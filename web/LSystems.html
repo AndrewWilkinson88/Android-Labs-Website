@@ -2,42 +2,44 @@
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <!--
-  Document   : LSystems.html
-  Created on : August 1, 2011
-  Author     : Andrew, AndrewWilkinson88@gmail.com
-               UMass Lowell Computer Science
+  Document  : LSystems.html
+  Edited    : June 14, 2013
+  Author    : Andrew, AndrewWilkinson88@gmail.com
 -->
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-type" content='text/html; charset=UTF-8' />
     <title>Android Labs</title>
-    <link rel="stylesheet" type="text/css" href="css/main.css" />
-    <script src="scripts/LoadLinks.js"     type="text/javascript"></script>  
-    <script src="dynamic/LinksDynamic.js"  type="text/javascript"></script>
+    
+    <!-- CSS Styles -->
+    <link   rel="stylesheet"                type="text/css" href="css/main.css" />
+    
+    <!-- JS Scripts -->
+    <script src="scripts/LoadNavigation.js" type="text/javascript"></script>  
+    <script src="dynamic/NavJson.js"        type="text/javascript"></script> 
   </head>
-  <body onLoad="initLinks()">
-    <div style="text-align: center"> <!-- So align="center" doesn't exist for tables
-                                     even though most browsers recognize it, it doesn't
-                                     pass XHTML Strict. This is a more allowable solution -->
+  
+  <body onLoad="initNavigation()">
+    <div style="text-align: center">
       <table style="width:900px; margin-right: auto; margin-left: auto;">
-        <tr>  <!--Title Begin -->
-          <td>
-            <!-- Uses two ID's as no other element of the page is going to use
-            these special Title styles -->
-            <div id="Android">ANDROID<span id="Labs">LABS</span></div>
-          </td>
-        </tr> <!--Title End -->
+        
+        <tr>  <!-- Title -->
+          <td> <div id="Android">ANDROID<span id="Labs">LABS</span></div> </td>
+        </tr>
 
-        <tr>  <!--Links+Content+Pictures require their own table-->
-          <td> <!-- Normal table element has no border -->
+        <tr>    <!-- Navigation and Content require their own table-->
+          <td>  <!-- Normal table element has no border -->
             <table>
               <tr>
-                <td class="withBorder"> <!--Links Begin-->
-                  <!-- The alternative to the no border -->
-                  <div id="links"></div>
-                </td> <!--Links End-->
-                <td class="withBorder" style="width: 100%;"> <!--Content Begin-->
+                
+                <!-- Navigation panel -->
+                <td class="withBorder"> 
+                  <div id="navPanel">This website requires Javascript to be enabled.</div>
+                </td>
+                
+                <!-- An explanation of the L-Systems project -->
+                <td class="withBorder" style="width: 100%;">
                   <div id="content">
                     <h1>L-Systems in OpenTK</h1>
                     <table style="width: 100%;">
@@ -80,8 +82,10 @@
                     </p>
                     
                   </div>
-                 </td><!--Content End-->
-                 <td class="withBorder"><!--Pictures Begin-->
+                 </td>
+                  
+                 <!-- Pictures from the project -->
+                 <td class="withBorder">
                    &nbsp;
                    <table style="margin-right: auto; margin-left: auto;">
                       <tr>
@@ -107,12 +111,13 @@
                       </tr>
                     </table>
                    &nbsp;
-                 </td> <!--Pictures End-->
+                 </td>                 
               </tr>
             </table>
           </td>
-        </tr><!--Links+News End-->
+        </tr>
       </table>
+    
     <footer>
       <p class="validator">
         <a href="http://validator.w3.org/check?uri=referer"><img

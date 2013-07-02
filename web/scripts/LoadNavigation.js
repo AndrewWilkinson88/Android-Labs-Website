@@ -30,6 +30,7 @@ function placeNavigation()
 		name 		= main_nav.names[i];
 		location 	= main_nav.locations[i];
 		subNav		= main_nav.subNavigation[i];
+		if( location == "NULL" ) location = "";
 		
 		strContent += "<li><a class=\"main\" href=\"" + location + "\">" + name + "</a></li>";
 		
@@ -66,6 +67,7 @@ function fillSubNavigation(strContent, subNav)
 	{
 		name 		= subNav.names[i];
 		location 	= subNav.locations[i];
+		if( location == "NULL" ) location = "";
 		
 		strContent += "<li class=\"sub\"><a href=\" "+ location +" \">"+ name +"</a></li>";
 	}
